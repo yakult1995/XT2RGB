@@ -14,7 +14,6 @@ function update_data(){
   // フォームから値取得
   pn = $('#PositiveNegative').val() || 0;
   hr = $('#HeartRate').val() || 0;
-  // alert('pn : ' + pn + ' | hr : ' + hr);
   
   // 値の計算
   var degree = cal_degree(pn, hr);
@@ -26,6 +25,7 @@ function update_data(){
   
   // 角度の調整(+135°)
   var exp_degree = parseInt(degree) - 135;
+  
   // 360°超えを修正
   if(exp_degree < 0){
     exp_degree = Math.abs(exp_degree);
@@ -39,15 +39,17 @@ function update_data(){
   }else{
     exp_distance = distance;
   }
+  
   // ÷√2
   exp_distance = exp_distance / Math.sqrt(2);
   
   // HSVからRGBに変換
   RGB = hsvToRgb(exp_degree, exp_distance, 1.0);
+  
   // RGBを16進数に変換
   hex_RGB = "#" + RGB.map(function(value){
-		return ("0" + value.toString(16)).slice(-2);
-	}).join("");
+    return ("0" + value.toString(16)).slice(-2);
+  }).join("");
   
   // 値の反映
   $('#rgb').text(hex_RGB);
