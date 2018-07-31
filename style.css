@@ -1,0 +1,26 @@
+html{
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+span.color{
+  border: solid 1px;
+  margin: 10px;
+  padding: 10px;
+}
+
+#distance{
+  color: yellow;
+  background-color: black;
+}
+
+#degree{
+  color: white;
+  background-color: black;
+}
+
+#rgb{
+  color: white;
+  background-color: black;
+}
