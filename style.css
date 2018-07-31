@@ -4,23 +4,24 @@ html{
   text-align: center;
 }
 
-span.color{
-  border: solid 1px;
+div{
+  margin: auto;
+  text-align: center;
+}
+
+.color{
   margin: 10px;
-  padding: 10px;
 }
 
 #distance{
-  color: yellow;
-  background-color: black;
 }
 
 #degree{
-  color: white;
-  background-color: black;
 }
 
 #rgb{
+  margin: auto;
+  width: 50%;
   color: white;
   background-color: black;
 }
